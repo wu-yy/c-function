@@ -1,0 +1,20 @@
+  class Word
+    {
+        public string value { get; set; }
+        public int count { get; set; }
+    }
+    class WordCountCompare<T>:IComparer<Word>
+    {
+        public int Compare(Word x,Word y)
+        {
+            if (x.count > y.count) return -1;
+
+            if (x.count == y.count)
+            {
+                return string.Compare(x.value, y.value);
+            }
+            return 1;
+        }
+    }
+    
+       wordList.Sort(new WordCountCompare<Word>()); //调用
