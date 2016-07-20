@@ -1,0 +1,3 @@
+ DateTime start = DateTime.Now;
+  DateTime end = DateTime.Now;
+ Console.WriteLine("耗时：{0}毫秒",end.Subtract(start).Milliseconds);
